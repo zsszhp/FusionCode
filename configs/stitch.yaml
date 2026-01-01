@@ -1,0 +1,13 @@
+# =====================================
+# 图像拼接相关配置
+# =====================================
+
+stitching:
+  mode: panorama
+  try_gpu: false
+
+preprocess:
+  clahe:
+    enable: true
+    clip_limit: 2.0
+    tile_grid_size: [8, 8]

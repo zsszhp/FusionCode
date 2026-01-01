@@ -1,0 +1,15 @@
+FusionCode Vision Engine
+
+This product includes software developed by the FusionCode contributors.
+
+This project may optionally integrate third-party commercial SDKs,
+including but not limited to:
+
+- MVTec HALCON
+- Dynamsoft Barcode Reader
+- Cognex Vision SDK
+
+These SDKs are NOT distributed with this repository.
+Users must obtain proper licenses independently.
+
+All trademarks belong to their respective owners.

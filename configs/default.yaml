@@ -1,15 +1,17 @@
+# =====================================
+# FusionCode 全局配置
+# =====================================
+
 system:
   debug: true
   device: cpu   # cpu / cuda
 
-stitching:
-  enable: true
-  mode: panorama
+logging:
+  level: INFO
+  save_to_file: true
+  log_dir: logs/
 
-detection:
-  use_yolo: false
-  yolo_model: weights/fusioncode_yolo.pt
-
-decoding:
+pipeline:
+  enable_stitching: true
+  enable_enhancement: true
   enable_commercial_sdk: false
-  retry_times: 3
