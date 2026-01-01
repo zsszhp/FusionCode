@@ -1,11 +1,21 @@
-from pyzbar.pyzbar import decode
+"""
+ZBar 解码器（条码核心兜底）
+
+优点：
+- 对脏污、破损容忍度高
+"""
+
+from pyzbar import pyzbar
 
 def decode_zbar(img):
-    res = []
-    for r in decode(img):
-        res.append({
-            "type": r.type,
-            "data": r.data.decode(),
+    results = []
+    decoded = pyzbar.decode(img)
+
+    for d in decoded:
+        results.append({
+            "type": d.type,
+            "data": d.data.decode("utf-8"),
             "engine": "zbar"
         })
-    return res
+
+    return results

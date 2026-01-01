@@ -1,11 +1,14 @@
-import cv2
-import numpy as np
+"""
+透视矫正模块（预留）
 
-def warp_by_points(img, pts):
-    pts = pts.astype("float32")
-    x,y,w,h = cv2.boundingRect(pts.astype(int))
-    dst = np.array([
-        [0,0],[w,0],[w,h],[0,h]
-    ], dtype="float32")
-    M = cv2.getPerspectiveTransform(pts, dst)
-    return cv2.warpPerspective(img, M, (w, h))
+工业中：
+- 常用于倾斜二维码
+- 通常结合检测模型使用
+"""
+
+def correct_perspective(img, pts):
+    """
+    TODO:
+    - 未来与 YOLO 检测框联动
+    """
+    return img

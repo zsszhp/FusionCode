@@ -1,21 +1,24 @@
+"""
+商业 SDK 解码接口
+
+支持：
+- HALCON
+- Dynamsoft
+
+说明：
+- 真实工业项目就是这样“条件启用”
+"""
+
 def decode_commercial(img):
     """
-    Unified entry for commercial SDKs.
+    示例结构，真实项目中接 SDK
     """
     results = []
 
-    try:
-        import dbr
-        # Dynamsoft example
-        # reader = BarcodeReader()
-        # results.extend(...)
-    except ImportError:
-        pass
+    # if HALCON_AVAILABLE:
+    #     results.extend(halcon_decode(img))
 
-    try:
-        import halcon
-        # HALCON example
-    except ImportError:
-        pass
+    # if DYNAMSOFT_AVAILABLE:
+    #     results.extend(dynamsoft_decode(img))
 
     return results
