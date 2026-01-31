@@ -1,0 +1,29 @@
+# =====================================
+# 拼接相关配置
+# =====================================
+
+stitching:
+  enable: true
+  mode: panorama           # panorama, feature_match, auto
+
+  opencv_stitcher:
+    mode: PANORAMA         # PANORAMA, SCANS
+    try_gpu: false
+
+  feature_match:
+    method: sift           # sift, orb
+    min_match_count: 10
+    ransac_threshold: 5.0
+
+  fallback:
+    enable: true           # OpenCV Stitcher 失败时使用特征匹配
+
+preprocess:
+  clahe:
+    enable: true
+    clip_limit: 2.0
+    tile_grid_size: [8, 8]
+
+  resize:
+    enable: true
+    max_size: 1600

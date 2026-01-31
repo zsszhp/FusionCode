@@ -9,7 +9,7 @@
 import os
 import cv2
 import yaml
-from fusioncode.pipeline.engine import FusionCodeEngine
+from fusioncode.core.engine import FusionCodeEngine
 
 def main(img_dir):
     with open("configs/default.yaml", "r") as f:

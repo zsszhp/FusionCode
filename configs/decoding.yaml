@@ -1,0 +1,36 @@
+# =====================================
+# 解码相关配置
+# =====================================
+
+decoding:
+  retry_times: 3
+  confidence_threshold: 2
+
+engines:
+  zbar:
+    enable: true
+    priority: 2
+
+  opencv_qr:
+    enable: true
+    priority: 1
+
+  zxing:
+    enable: false
+    priority: 1
+
+  halcon:
+    enable: false
+    priority: 3
+    barcode_types:
+      - Code 128
+      - Code 39
+      - EAN-13
+      - UPC-A
+      - Data Matrix ECC 200
+    qr_types:
+      - QR Code
+
+  commercial:
+    enable: false
+    priority: 3

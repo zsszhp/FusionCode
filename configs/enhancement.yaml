@@ -1,0 +1,36 @@
+# =====================================
+# 增强相关配置
+# =====================================
+
+enhancement:
+  enable: true
+  strategy: adaptive         # adaptive, all, none
+
+  denoise:
+    enable: true
+    method: fastNlMeans      # fastNlMeans, gaussian, median
+    h: 10                   # 滤波强度
+    template_window_size: 7
+    search_window_size: 21
+
+  deblur:
+    enable: true
+    method: sharpen          # sharpen, wiener
+    kernel_size: 3
+
+  morphology:
+    enable: true
+    operation: close         # close, open, erode, dilate
+    kernel_size: 3
+
+  perspective:
+    enable: true
+    auto_detect: true       # 自动检测透视畸变
+
+  inpainting:
+    enable: true
+    method: telea           # telea, ns
+    auto_detect: true       # 自动检测缺失区域
+
+  adaptive:
+    quality_threshold: 0.3  # 质量阈值

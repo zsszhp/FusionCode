@@ -4,11 +4,15 @@ pyzbar>=0.1.9
 pyyaml>=6.0
 tqdm>=4.66
 
-# 深度学习（YOLO 接口预留）
+# 深度学习（YOLOv8_OBB）
 torch>=2.0
 torchvision>=0.15
 ultralytics>=8.0
 
 # 可选商业 SDK
-# halcon-python
-# dynamsoft-barcode-reader
+# halcon-python>=23.11
+# dynamsoft-barcode-reader>=10.0
+
+# 测试框架
+pytest>=7.0
+pytest-cov>=4.0

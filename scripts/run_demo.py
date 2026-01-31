@@ -7,7 +7,7 @@ python scripts/run_demo.py
 
 import cv2
 import yaml
-from fusioncode.pipeline.engine import FusionCodeEngine
+from fusioncode.core.engine import FusionCodeEngine
 
 def main():
     with open("configs/default.yaml", "r") as f:

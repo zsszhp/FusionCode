@@ -1,0 +1,26 @@
+# =====================================
+# 检测相关配置
+# =====================================
+
+detection:
+  primary: yolo_obb          # 主检测方法: yolo_obb, traditional
+  fallback: traditional      # 兜底方法
+
+  yolo_obb:
+    model_path: models/yolo_obb/barcode_qrcode.pt
+    conf_threshold: 0.5
+    iou_threshold: 0.45
+    enable: true
+
+  traditional:
+    barcode:
+      gradient_threshold: 225
+      min_roi_width: 50
+      min_roi_height: 20
+      enable: true
+    qrcode:
+      enable: true
+
+  roi_extraction:
+    padding: 10              # ROI 边距
+    min_size: 20             # 最小 ROI 尺寸
